@@ -1,7 +1,7 @@
 :root {
-    --dark-color: rgba(61, 40, 40, 0.5);
+    --dark-color: rgba(61, 40, 40, 0.63);
     --medium-color: #333;
-    --light-color: rgba(202, 165, 165, 0.568);
+    --light-color: rgba(202, 165, 165, 0.815);
 }
 
 * {
@@ -24,4 +24,65 @@ body {
     background-size: cover;
     background-position: bottom;
     clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%);
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
